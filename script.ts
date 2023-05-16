@@ -26,6 +26,9 @@ printName({
 interface IPerson {
   id: number;
   name: string;
+  isMale: boolean;
+  // optional key
+  isRich?: boolean;
 }
 /**
  * nạp tham số person với interface IPerson tương đương với 1 object với
@@ -39,4 +42,5 @@ function printNameBasic(person: IPerson): void {
 printNameBasic({
   id: 20,
   name: "Trang",
+  isMale: false,
 });

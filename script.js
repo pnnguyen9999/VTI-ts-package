@@ -24,4 +24,5 @@ function printNameBasic(person) {
 printNameBasic({
     id: 20,
     name: "Trang",
+    isMale: false,
 });
