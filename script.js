@@ -1,3 +1,7 @@
+"use strict";
+// thay vì khởi tạo generic type thì gán thẳng type cho từng thuộc tính luôn
+Object.defineProperty(exports, "__esModule", { value: true });
+var module_1 = require("./module");
 /**
  * nạp tham số person với interface IPerson tương đương với 1 object với
  * {id: number, name: string}
@@ -45,3 +49,21 @@ var student1 = new Student(10, "Long");
 var student2 = new Student("abcx12", "Long");
 console.log(student1.testMethod({ id: "K10", name: "ITK10" }));
 console.log({ student1: student1, student2: student2 });
+(0, module_1.default)();
+function sum(a, b) {
+    return a + b;
+}
+function calculate(a, b, operation, c) {
+    var result = operation(a, b);
+    console.log("kqua", operation, "la: ", result);
+}
+calculate(20, 10, sum);
+function helloClass(obj) {
+    console.log(obj);
+}
+var person = {
+    id: 1,
+    name: "Name",
+    mail: "amc@vn.vn",
+};
+helloClass(person);

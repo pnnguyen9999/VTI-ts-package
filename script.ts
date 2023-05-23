@@ -1,4 +1,7 @@
 // thay vì khởi tạo generic type thì gán thẳng type cho từng thuộc tính luôn
+
+import testFunction from "./module";
+
 // id: number và name là string
 interface IPerson {
   id: number;
@@ -76,3 +79,34 @@ const student2 = new Student<string, string>("abcx12", "Long");
 console.log(student1.testMethod({ id: "K10", name: "ITK10" }));
 
 console.log({ student1, student2 });
+
+testFunction();
+
+function sum(a: number, b: number) {
+  return a + b;
+}
+
+function calculate(a: number, b: number, operation, c?: number) {
+  let result = operation(a, b);
+  console.log("kqua", operation, "la: ", result);
+}
+
+calculate(20, 10, sum);
+
+interface IHello {
+  id: number;
+  name: string;
+  mail: string;
+}
+
+function helloClass(obj: IHello) {
+  console.log(obj);
+}
+
+var person: IHello = {
+  id: 1,
+  name: "Name",
+  mail: "amc@vn.vn",
+};
+
+helloClass(person);
